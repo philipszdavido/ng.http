@@ -4,7 +4,9 @@ A Reactive __HTTP__ module for Angular. Reactive? Yes, I super-charged the modul
 
 __RxJS__ is a library that brings Reactivity (notion of data/events over time) to JavaScript.
 
+
 > __RxJS__ stands for __R__eactive E__x__tensions for __J__ava__S__cript.
+
 
 This is my own implementation/clone of the Angular `HTTP` module.
 
