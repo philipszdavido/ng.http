@@ -2,13 +2,16 @@
     "name": "ng_http",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "dist/bundles/ng.http.umd.min.js",
+    "module": "dist/index.js",
+    "typings": "dist/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "transpile": "ngc",
-        "package": "rollup -C",
-        "minify": "uglify dist/bundles/ng.http.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng.http.umd.min.js",
-        "build": "npm run transpile && npm run package && npm run minify"
+        "package": "rollup -c",
+        "minify": "uglifyjs dist/bundles/ng.http.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng.http.umd.min.js",
+        "build": "npm run transpile && npm run package && npm run minify",
+        "push": "bash ./tools/push.sh"
     },
     "keywords": [],
     "author": "Chidume Nnamdi <kurtwanger40@gmail.com>",

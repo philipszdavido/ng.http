@@ -1,13 +1,12 @@
-class RequestOptions {
+export class RequestOptions {
     url: string
     method: string
     body?: Object
 
-    constructor(opts){
+    constructor(opts: any){
         let { url, method, body } = opts
         this.url = url
         this.method = method
         this.body = body
     }
 }
-export default RequestOptions

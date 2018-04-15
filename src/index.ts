@@ -1,2 +1,2 @@
-export { Http } from './src/Http'
-export { HttpModule } from './HttpModule'
+export { Http } from './Http';
+export { HttpModule } from './HttpModule';

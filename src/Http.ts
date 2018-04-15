@@ -1,9 +1,10 @@
-import RequestOptions from './RequestOptions'
+import { RequestOptions } from './RequestOptions';
+import { Observable } from 'rxjs';
 
-class Http {
+export class Http {
     constructor() {}
-    request(requestOptions: RequestOptions) {
-        return Observable.create(function (observer: any) {
+    request(requestOptions: RequestOptions): Observable<any> {
+        return new Observable(function (observer: any) {
 
            let httpRequest = new XMLHttpRequest()
            httpRequest.open(requestOptions.method,requestOptions.url) 
@@ -27,11 +28,10 @@ class Http {
            httpRequest.send()
         })
     }
-    get (url, options?) {
+    get (url: string, options?: any) {
         return this.request(new RequestOptions({url, method: 'GET'}))
     }
-    post (url, body, options?) {
+    post (url: string, body: any, options?: any) {
 
     }
 }
-export default Http
