@@ -1,22 +1,27 @@
 # ng.http
 
-A reactive __HTTP__ module for Angular.
+A Reactive __HTTP__ module for Angular. Reactive? Yes, I super-charged the module with the [RxJS library](https://github.com/ReactiveX/rxjs).
 
-My own implementation of `HTTP` module for the Angular framework.
+__RxJS__ is a library that brings Reactivity (notion of data/events over time) to JavaScript.
 
-#  Installation
+> __RxJS__ stands for __R__eactive E__x__tensions for __J__ava__S__cript.
 
-You can pull in from npm use the command:
+This is my own implementation/clone of the Angular `HTTP` module.
+
+# Installation
+
+You can pull in from `NPM` using the command:
 
 ```sh
-npm i ng_http -S
+npm i ng.http.lib -S
 ```
 
 Using yarn:
 
 ```sh
-yarn add ng_http
+yarn add ng.http.lib
 ```
+Yeah, I know, the name looks weird and with the double dots, its kind of creepy, I would say. I originally named it `ng_http`, but I couldn't publish with the name 'cos of too many similiar names on `NPM`, so I had to conjure up that.
 
 # Usage
 
@@ -29,7 +34,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 import { AppComponent } from './app.component';
-import { HttpModule } from 'ng_http'
+import { HttpModule } from 'ng.http.lib'
 
 @NgModule({
   declarations: [
@@ -59,7 +64,7 @@ The __Http__ class is available to the whole Angular app because it was added to
 
 ```ts
 import { Component, OnInit } from '@angular/core';
-import { Http } from 'ng_http'
+import { Http } from 'ng.http.lib'
 
 @Component({
   selector: 'app-todo',
@@ -82,7 +87,7 @@ export class TodoComponent implements OnInit {
 }
 ```
 
-You see the `this.http.get` method returns an Observable, which we subscribe to get our values.
+You see the `this.http.get` method returns an Observable, which we subscribe to the stream, to get our values.
 
 # Authors
 

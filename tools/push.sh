@@ -1,1 +1,1 @@
-git add . && git commit -m -a "Updated some files (*.ts)" && git push origin master
+git add . && git commit -m "Updated some files (*.ts)" && git push origin master
