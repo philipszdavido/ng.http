@@ -1,14 +1,17 @@
 # ng.http
 
-A Reactive __HTTP__ module for Angular. Reactive? Yes, I super-charged the module with the [RxJS library](https://github.com/ReactiveX/rxjs).
+A Reactive __HTTP__ module for Angular. Reactive? Yes!, I super-charged the module with the [RxJS library](https://github.com/ReactiveX/rxjs). 
+
 
 __RxJS__ is a library that brings Reactivity (notion of data/events over time) to JavaScript.
 
 
-> __RxJS__ stands for __R__eactive E__x__tensions for __J__ava__S__cript.
+> __RxJS__ stands for __R__ eactive E __x__ tensions for __J__ ava __S__ cript.
 
 
-This is my own implementation/clone of the Angular `HTTP` module.
+This is my own implementation/clone of the Angular __HTTP module__.
+
+It can be substituted for Angular's __HTTP library__.
 
 # Installation
 
@@ -67,14 +70,18 @@ The __Http__ class is available to the whole Angular app because it was added to
 ```ts
 import { Component, OnInit } from '@angular/core';
 import { Http } from 'ng.http.lib'
+import ToDo from './model/todo'
 
 @Component({
   selector: 'app-todo',
   template: `
     <p>
       todo works!
+      <div *ngFor="let todo in todos">
+        {{todo.name}}
+      </div>
     </p>
-    <button (click)="see()">See</button>
+    <button (click)="getTodos()">Get Todos</button>
   `,
   styles: []
 })
@@ -82,9 +89,10 @@ export class TodoComponent implements OnInit {
 
   constructor(private http: Http) { }
 
-  see() {
+  todos: Array<ToDo>
+  getTodos() {
     this.http.get('http://localhost:3000/api')
-      .subscribe((v) => alert(v),err=>alert(`Error`))
+      .subscribe((v) => this.todos=v,err=>console.log(`Error`))
   }
 }
 ```
