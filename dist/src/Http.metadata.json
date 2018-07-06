@@ -1,1 +1,1 @@
-[{"__symbolic":"module","version":4,"metadata":{"Http":{"__symbolic":"class","members":{"__ctor__":[{"__symbolic":"constructor"}],"request":[{"__symbolic":"method"}],"get":[{"__symbolic":"method"}],"post":[{"__symbolic":"method"}]}}}}]
+[{"__symbolic":"module","version":4,"metadata":{"Http":{"__symbolic":"class","members":{"__ctor__":[{"__symbolic":"constructor","parameters":[{"__symbolic":"reference","module":"./backend/xhr_backend","name":"XHRBackend"}]}],"request":[{"__symbolic":"method"}],"get":[{"__symbolic":"method"}],"post":[{"__symbolic":"method"}]}}}}]

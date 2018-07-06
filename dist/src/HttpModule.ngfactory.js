@@ -6,8 +6,8 @@
 */ 
 import * as i0 from "@angular/core";
 import * as i1 from "./HttpModule";
-import * as i2 from "@angular/common";
+import * as i2 from "./backend/xhr_backend";
 import * as i3 from "./Http";
-var HttpModuleNgFactory = i0.ɵcmf(i1.HttpModule, [], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, []], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i2.NgLocalization, i2.NgLocaleLocalization, [i0.LOCALE_ID, [2, i2.ɵa]]), i0.ɵmpd(4608, i3.Http, i3.Http, []), i0.ɵmpd(512, i2.CommonModule, i2.CommonModule, []), i0.ɵmpd(512, i1.HttpModule, i1.HttpModule, [])]); });
+var HttpModuleNgFactory = i0.ɵcmf(i1.HttpModule, [], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, []], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(4608, i2.XHRBrowser, i2.XHRBrowser, []), i0.ɵmpd(4608, i2.XHRBackend, i2.XHRBackend, [i2.XHRBrowser]), i0.ɵmpd(5120, i3.Http, i1.httpFactory, [i2.XHRBackend]), i0.ɵmpd(512, i1.HttpModule, i1.HttpModule, [])]); });
 export { HttpModuleNgFactory as HttpModuleNgFactory };
 //# sourceMappingURL=HttpModule.ngfactory.js.map
